@@ -1,0 +1,91 @@
+
+
+.home-container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    .hero-section
+        display: flex
+        align-items: center
+        flex-direction: column
+        gap: 2rem
+
+        .photo-container
+            display: flex;
+            align-items: center;
+            justify-content: center
+            width: 118px
+            height: 130px
+            background-color: #f5f5f505
+            border: 0.7px solid #f5f5f550
+            border-radius: 12px
+            margin-bottom: 1.5rem
+            img
+                
+                border: 0.7px solid #f5f5f5 50
+                border-radius: 10px
+                width: 112px
+                height: 124px
+                object-fit: cover;
+                
+        
+        .headers
+            max-width: 1248px
+            display: flex
+            align-items: center
+            flex-direction: column
+            gap: 1rem
+            .greeting-header
+                line-height: 100%
+                padding: 0
+                margin: 0
+                align-content: center
+                font-size: 3.5rem
+                font-weight: 400
+                span
+                    background: linear-gradient(90deg, #747bff, #ff5e62, #f5f5f5, #747bff)
+                    background-size: 400% 100% // Make the gradient wider for smooth animation
+                    -webkit-background-clip: text
+                    background-clip: text
+                    color: transparent // Make the text transparent so the gradient shows through
+                    animation: fluidGradient 8s ease infinite // Apply the animation
+
+            .abilities-header
+                line-height: 100%
+                text-align: center
+                font-size: 4.5rem
+                font-weight: 500
+
+    .scroll-text
+        position: fixed
+        right: calc((100vw - 1248px) / 2);
+        bottom: 10%
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem
+        background: linear-gradient(45deg, #ffffff, #96969A)
+        background-size: 400% 100% // Make the gradient wider for smooth animation
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent // Make the text transparent so the gradient shows through
+        animation: fluidGradient 5s ease infinite
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: url(#appleGradient) // Reference the gradient defined in the SVG
+                animation: appleGradient 5s ease infinite
+
+
+
+
+    
+@keyframes fluidGradient
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%

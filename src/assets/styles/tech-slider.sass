@@ -1,0 +1,33 @@
+
+
+.tech-slider
+    max-width: 1248px
+    display: flex
+    overflow: hidden
+    padding: 1.5rem 0
+    .slider-track
+        display: flex
+        flex-direction: row
+        animation: scroll 30s linear infinite
+        gap: 2rem
+        .tech-item
+            display: flex
+            flex-direction: row
+            justify-content: center
+            gap: 0.5rem
+            align-items: center;
+
+            .tech-logo
+                width: 24px
+                height: 24px
+                object-fit: contain
+            
+            .tech-name
+                font-size: 1rem;
+
+    
+@keyframes scroll
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-50%)
