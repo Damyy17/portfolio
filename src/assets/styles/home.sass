@@ -10,7 +10,7 @@
         display: flex
         align-items: center
         flex-direction: column
-        gap: 2rem
+        gap: 1rem
 
         .photo-container
             display: flex;
@@ -21,7 +21,6 @@
             background-color: #f5f5f505
             border: 0.7px solid #f5f5f550
             border-radius: 12px
-            margin-bottom: 1.5rem
             img
                 
                 border: 0.7px solid #f5f5f5 50
@@ -65,21 +64,26 @@
         display: flex;
         flex-direction: row;
         gap: 0.25rem
-        background: linear-gradient(45deg, #ffffff, #96969A)
+        background: linear-gradient(45deg, #ffffff, #96969A, #ffffff)
         background-size: 400% 100% // Make the gradient wider for smooth animation
         -webkit-background-clip: text
         background-clip: text
         color: transparent // Make the text transparent so the gradient shows through
-        animation: fluidGradient 5s ease infinite
+        animation: fluidGradient 8s ease infinite
+        animation: jumpAnimation 1.6s ease-in-out infinite
         svg
             width: 24px
             height: 24px
-            path
-                fill: url(#appleGradient) // Reference the gradient defined in the SVG
-                animation: appleGradient 5s ease infinite
 
 
 
+
+@keyframes jumpAnimation
+  0%, 50%, 100%
+    transform: translateY(0) // Initial position
+  50%
+    transform: translateY(-2.5px) // Move up by 2px
+    
 
     
 @keyframes fluidGradient
